@@ -16,3 +16,14 @@ print(adf_test)
 
 acf(ts_data, main = "ACF - Original Series")
 pacf(ts_data, main = "PACF - Original Series")
+
+library(forecast)
+# model <- arima(ts_data, order = c(1, 0, 0))
+model <- auto.arima(ts_data)
+print(summary(model))
+
+# Forecasting
+forecasted_values <- forecast(model, h = 20)
+
+plot(forecasted_values, main = "Forecasted Values", ylab = "Sales Quantity", xlab = "Time", col = "blue")
+
