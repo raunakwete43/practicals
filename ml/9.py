@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-# Sample dataset (2D)
 X = np.array(
     [
         [2.5, 2.4],
