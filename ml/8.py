@@ -1,4 +1,4 @@
-from math import e
+# Backpropagation
 import numpy as np
 
 
